@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nautilus_venue_shared"
+version = "0.1.0"
+description = "Shared Python helpers for custom nautilus_trader venue adapters (nautilus_nado, nautilus_bitget)."
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "akb" }]
+# nautilus_trader is an installed sibling in the ntrade venv — not a hard dep
+# so this package can be imported standalone for testing.
+
+[tool.setuptools.packages.find]
+include = ["nautilus_venue_shared*"]
